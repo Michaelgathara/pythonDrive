@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pythonDrive
+Version: 0.1
+Summary: A Python wrapper for Google Drive API
+Home-page: https://michaelgathara.com/pythondrive
+Author: Michael Gathara
+Author-email: michael@michaelgathara.com
+Maintainer: Michael Gathara
+Maintainer-email: michael@michaelgathara.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

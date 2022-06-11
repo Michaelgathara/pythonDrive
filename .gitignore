@@ -1,2 +1,3 @@
 venv
 tests/secretFiles
+src/pythonDrive/__pycache__
