@@ -1,6 +1,6 @@
-Metadata-Version: 1.2
+Metadata-Version: 2.1
 Name: pythonDrive
-Version: 0.1
+Version: 0.2
 Summary: A Python wrapper for Google Drive API
 Home-page: https://michaelgathara.com/pythondrive
 Author: Michael Gathara
@@ -8,5 +8,52 @@ Author-email: michael@michaelgathara.com
 Maintainer: Michael Gathara
 Maintainer-email: michael@michaelgathara.com
 License: MIT
-Description: UNKNOWN
+Description: 
+        # PythonDrive
+        
+        - A minimal Python wrapper for Google Drive
+        
+        - Built to simplify some Google Drive usage using service accounts even further than possible
+        
+        ## Usage
+        
+        Make sure you have a service account with the Google Drive API enabled, can be found [here](cloud.google.com)
+        <br>
+        and the instructions of how to acquire a service account may be found [here](https://www.howtogeek.com/devops/how-to-create-and-use-service-accounts-in-google-cloud-platform/) 
+        
+        <br>
+        
+        ```
+        
+        pip install pythonDrive
+        
+        ```
+        <br>
+        
+        ```python
+        
+        import pythonDrive
+        
+        # or you can do
+        # from pythonDrive import auth as pyAuth
+        # from pythonDrive import drive as pyDrive
+        
+        ```
+        
+        <br>
+        
+        ### PyAuth
+        
+        ```python
+        # assuming you imported above
+        googleClient: object = pyAuth.clientServiceAccountAuth('path/to/key.json', ['scopes'])
+        
+        # This will be your actual Google Drive interactor
+        googleDrive: object = pyDrive.drive(googleClient)
+        
+        # Get a list of all your files
+        listOfFiles: list = googleDrive.get_all_files()
+        print(listOfFiles)
+        ```
 Platform: UNKNOWN
+Description-Content-Type: text/markdown

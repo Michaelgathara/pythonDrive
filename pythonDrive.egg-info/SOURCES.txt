@@ -1,5 +1,7 @@
 README.md
 setup.py
+pythonDrive/auth.py
+pythonDrive/drive.py
 pythonDrive.egg-info/PKG-INFO
 pythonDrive.egg-info/SOURCES.txt
 pythonDrive.egg-info/dependency_links.txt

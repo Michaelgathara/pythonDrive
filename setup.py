@@ -1,7 +1,10 @@
 from setuptools import setup
+with open("DESCRIPTION.md", "r") as f:
+    long_description = f.read()
+
 setup (
     name = 'pythonDrive',
-    version = '0.1',
+    version = '0.2',
     description = 'A Python wrapper for Google Drive API',
     author = 'Michael Gathara',
     author_email = 'michael@michaelgathara.com',
@@ -9,7 +12,9 @@ setup (
     maintainer_email = 'michael@michaelgathara.com',
     url = 'https://michaelgathara.com/pythondrive',
     license='MIT',
-    packages = ['pythondrive'],
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    packages = ['pythonDrive'],
     install_requires = [
         "cachetools >= 5.2.0",
         "certifi >= 2022.5.18.1",
@@ -30,6 +35,5 @@ setup (
         "six >= 1.16.0",
         "uritemplate >= 4.1.1",
         "urllib3 >= 1.26.9"
-
     ]
 )

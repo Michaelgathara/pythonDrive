@@ -6,6 +6,12 @@ import drive
 secretKey: str = 'secretFiles/auth.json'
 
 def test_auth():
+    """
+        test_auth():
+        param: None
+        return: None
+        test_auth() is responsible for testing the auth.py module
+    """
     try:
         client = auth.clientServiceAccountAuth(secretKey, ['https://www.googleapis.com/auth/drive'])
         assert client is not None
@@ -13,6 +19,12 @@ def test_auth():
         raise e
 
 def test_auth_creds():
+    """
+        test_auth_creds():
+        param: None
+        return: None
+        test_auth_creds() is responsible for testing the auth module but returning credentials
+    """
     try:
         credentials = auth.credsServiceAccountAuth(secretKey, ['https://www.googleapis.com/auth/drive'])
         assert credentials is not None
