@@ -1,4 +1,7 @@
 class drive(object):
+    """
+        
+    """
     def __init__(self, client: object):
         self.service = client
     
@@ -35,11 +38,48 @@ class drive(object):
         :param parents: The parents of the file to create.
         :return: A file.
         """
-        # TODO - Fix this to be able to create a file
+        # TODO - Create a tester for this function. (create_file)
         try:
             if parents is None:
                 return self.service.files().create(body={'name': file_name, 'mimeType': mime_type}).execute()
             else:
                 return self.service.files().create(body={'name': file_name, 'mimeType': mime_type, 'parents': parents}).execute()
+        except Exception as e:
+            raise e
+
+    def get_metadata(self, file_id: str) -> object:
+        """
+        get_metadata allows a user to get the metadata of a file.
+        :param file_id: The id of the file to get the metadata of.
+        :return: A file.
+        """
+        # TODO - Create a tester for this function. (get_metadata)
+        try:
+            return self.service.files().get(fileId=file_id, fields='*').execute()
+        except Exception as e:
+            raise e
+
+    def update_metadata(self, file_id: str, file_metadata: dict) -> object:
+        """
+        update_metadata allows a user to update the metadata of a file.
+        :param file_id: The id of the file to update the metadata of.
+        :param file_metadata: The metadata to update the file with.
+        :return: A file.
+        """
+        # TODO - Create a tester for this function. (update_metadata)
+        try:
+            return self.service.files().update(fileId=file_id, body=file_metadata).execute()
+        except Exception as e:
+            raise e
+    
+    def get_update_time(self, file_id: str) -> str:
+        """
+        get_update_time allows a user to get the update time of a file.
+        :param file_id: The id of the file to get the update time of.
+        :return: A string of the update time.
+        """
+        # TODO - Create a tester for this function. (get_update_time)
+        try:
+            return self.service.files().get(fileId=file_id, fields='modifiedTime').execute()['modifiedTime']
         except Exception as e:
             raise e
