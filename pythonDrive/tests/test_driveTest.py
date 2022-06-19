@@ -1,7 +1,7 @@
 import sys
-sys.path.insert(1, '../pythonDrive')
-import auth
-import drive
+# sys.path.insert(1, '../pythonDrive')
+from pythonDrive import auth
+from pythonDrive import drive
 
 test_secretKey: str = 'secretFiles/auth.json'
 

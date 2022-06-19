@@ -1,3 +1,4 @@
 venv
 tests/secretFiles
-src/pythonDrive/__pycache__
+pythonDrive/__pycache__
+pythonDrive/tests/test_driveTest.py

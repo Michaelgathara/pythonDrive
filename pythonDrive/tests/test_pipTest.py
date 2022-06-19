@@ -2,9 +2,8 @@
 pip install pythonDrive
 """
 # import pythondrive
-
-from pythondrive import auth as pyAuth
-from pythondrive import drive as pyDrive
+from pythonDrive import auth as pyAuth
+from pythonDrive import drive as pyDrive
 
 
 def test_pip_auth():
