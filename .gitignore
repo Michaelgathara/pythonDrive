@@ -1,4 +1,5 @@
 venv
+../pythonDrive/tests
 tests/secretFiles
 pythonDrive/__pycache__
-pythonDrive/tests/test_driveTest.py
+tests/test_driveTest.py
